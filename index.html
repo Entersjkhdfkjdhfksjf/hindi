@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>एवरेस्ट: मेरी शिखर यात्रा</title>
+<style>
+:root {--bg:#1a1a1a;--bg2:#2d2d2d;--txt:#fff;--txt2:#ccc;--accent:#4CAF50;--card:#333;--quote:#404040}
+body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:var(--bg);color:var(--txt)}
+.header{background:var(--bg2);text-align:center;padding:2rem;position:relative;overflow:hidden}
+.mountain-bg{position:absolute;bottom:0;left:0;width:100%;height:60px;background:linear-gradient(45deg,var(--accent)25%,transparent 25%)-50px 0,linear-gradient(-45deg,var(--accent)25%,transparent 25%)-50px 0;background-size:100px 100px;opacity:.2}
+.container{max-width:800px;margin:0 auto;padding:0 20px}
+.story-section{background:var(--bg2);padding:2rem;margin:1rem 0;border-radius:8px;box-shadow:0 4px 6px rgba(0,0,0,.2);transform:translateY(0);transition:.3s}
+.story-section:hover{transform:translateY(-5px)}
+.character-card{background:var(--card);padding:1rem;margin:1rem 0;border-left:4px solid var(--accent);transition:.3s;cursor:pointer}
+.quote{font-style:italic;color:var(--txt2);background:var(--quote);padding:1rem;border-radius:4px;margin:1rem 0}
+.theme-box{background:var(--card);padding:1rem;border-radius:4px;margin:1rem 0;border-left:4px solid var(--accent)}
+.menu-btn{position:fixed;top:10px;right:10px;z-index:1000;background:var(--accent);border:none;color:var(--txt);padding:10px;border-radius:4px;cursor:pointer}
+.navigation{position:fixed;top:0;right:-200px;width:200px;height:100%;background:var(--bg2);padding:4rem 1rem;transition:.3s;z-index:999}
+.navigation.active{right:0}
+.navigation a{display:block;color:var(--txt);text-decoration:none;margin:.5rem 0;padding:.5rem;border-radius:4px;transition:.3s}
+.navigation a:hover{background:var(--accent)}
+.timeline{position:relative;padding:20px 0}
+.timeline-item{padding:20px;background:var(--card);border-radius:4px;margin:20px 0;opacity:0;transform:translateY(20px);transition:.5s}
+.timeline-item.visible{opacity:1;transform:translateY(0)}
+.timeline-item::before{content:'';position:absolute;left:-20px;top:50%;width:10px;height:10px;background:var(--accent);border-radius:50%}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0}
+.gallery-item{background:var(--card);padding:1rem;text-align:center;border-radius:4px}
+.achievements{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.progress-bar{height:30px;background:var(--bg2);border-radius:15px;overflow:hidden;margin:1rem 0}
+.progress{width:0;height:100%;background:var(--accent);transition:1.5s}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0}
+.stat-card{background:var(--card);padding:1rem;text-align:center;border-radius:4px}
+</style>
+</head>
+<body>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav class="navigation">
+<a href="#summary">कहानी सार</a>
+<a href="#journey">यात्रा विवरण</a>
+<a href="#timeline">समय रेखा</a>
+<a href="#challenges">चुनौतियाँ</a>
+<a href="#achievements">उपलब्धियाँ</a>
+<a href="#stats">आंकड़े</a>
+<a href="#gallery">छायाचित्र</a>
+</nav>
+<header class="header">
+<div class="mountain-bg"></div>
+<h1>एवरेस्ट: मेरी शिखर यात्रा</h1>
+<p>बचेंद्री पाल की आत्मकथा</p>
+<div class="progress-bar"><div class="progress"></div></div>
+</header>
+<main class="container">
+<section id="summary" class="story-section">
+<h2>कहानी का सार</h2>
+<p>बचेंद्री पाल, भारत की पहली महिला एवरेस्ट विजेता की गौरवशाली कहानी। 23 मई 1984 को दुनिया की सबसे ऊंची चोटी (8,848 मीटर) पर पहुंचकर उन्होंने एक नया इतिहास रचा।</p>
+<div class="quote">"हर चोटी को छूने से पहले, हमें अपने आप को जीतना होता है।"</div>
+</section>
+<section id="journey" class="story-section">
+<h2>यात्रा विवरण</h2>
+<p>नेहरू पर्वतारोहण संस्थान से प्रशिक्षण लेकर एवरेस्ट की चुनौतीपूर्ण यात्रा तक का सफर। इस यात्रा ने न केवल भारतीय पर्वतारोहण का इतिहास बदला, बल्कि महिला सशक्तिकरण की एक नई मिसाल भी कायम की।</p>
+</section>
+<section id="timeline" class="story-section">
+<h2>समय रेखा</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h3>1983</h3>
+<p>नेहरू पर्वतारोहण संस्थान में प्रशिक्षण</p>
+</div>
+<div class="timeline-item">
+<h3>मार्च 1984</h3>
+<p>एवरेस्ट अभियान की शुरुआत</p>
+</div>
+<div class="timeline-item">
+<h3>अप्रैल 1984</h3>
+<p>बेस कैंप से आगे की यात्रा</p>
+</div>
+<div class="timeline-item">
+<h3>23 मई 1984</h3>
+<p>एवरेस्ट शिखर पर विजय</p>
+</div>
+</div>
+</section>
+<section id="challenges" class="story-section">
+<h2>चुनौतियाँ</h2>
+<div class="theme-box">
+<h3>प्राकृतिक बाधाएं</h3>
+<p>- खुम्बु आइसफॉल का खतरनाक रास्ता</p>
+<p>- -40° सेल्सियस तक का तापमान</p>
+<p>- 8000 मीटर की ऊंचाई पर ऑक्सीजन की कमी</p>
+</div>
+<div class="theme-box">
+<h3>मानसिक चुनौतियाँ</h3>
+<p>- लगातार मृत्यु का खतरा</p>
+<p>- शारीरिक और मानसिक थकान</p>
+<p>- डेथ ज़ोन में निर्णय लेने की क्षमता</p>
+</div>
+</section>
+<section id="achievements" class="story-section">
+<h2>उपलब्धियाँ</h2>
+<div class="achievements">
+<div class="character-card">
+<h3>पद्मश्री</h3>
+<p>1984 में भारत सरकार द्वारा सम्मानित</p>
+</div>
+<div class="character-card">
+<h3>आर्यभट्ट पुरस्कार</h3>
+<p>पर्वतारोहण में विशिष्ट योगदान</p>
+</div>
+<div class="character-card">
+<h3>पर्वतारोहण में विशेष योगदान</h3>
+<p>अंतर्राष्ट्रीय पर्वतारोहण समुदाय द्वारा सम्मान</p>
+</div>
+</div>
+</section>
+<section id="stats" class="story-section">
+<h2>आंकड़े</h2>
+<div class="stats">
+<div class="stat-card">
+<h3>ऊंचाई</h3>
+<p>8,848 मीटर</p>
+</div>
+<div class="stat-card">
+<h3>तापमान</h3>
+<p>-40°C</p>
+</div>
+<div class="stat-card">
+<h3>यात्रा अवधि</h3>
+<p>52 दिन</p>
+</div>
+</div>
+</section>
+<section id="gallery" class="story-section">
+<h2>छायाचित्र</h2>
+<div class="gallery">
+<div class="gallery-item">
+<img src="/api/placeholder/200/150" alt="बेस कैंप">
+<p>एवरेस्ट बेस कैंप</p>
+</div>
+<div class="gallery-item">
+<img src="/api/placeholder/200/150" alt="आइसफॉल">
+<p>खुम्बु आइसफॉल</p>
+</div>
+<div class="gallery-item">
+<img src="/api/placeholder/200/150" alt="शिखर">
+<p>शिखर पर विजय</p>
+</div>
+</div>
+</section>
+</main>
+<script>
+const toggleMenu=()=>document.querySelector('.navigation').classList.toggle('active');
+const observer=new IntersectionObserver(e=>e.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.5});
+document.querySelectorAll('.timeline-item').forEach(e=>observer.observe(e));
+setTimeout(()=>document.querySelector('.progress').style.width='100%',500);
+document.querySelectorAll('.character-card').forEach(e=>e.addEventListener('click',()=>{e.style.transform='scale(1.02)';setTimeout(()=>e.style.transform='',200)}));
+</script>
+</body>
+</html>
